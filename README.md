@@ -15,13 +15,13 @@ Regarding this table schema, we can make the following comments:
 -	DATA is averaged hourly mean sea level
 - 	RESIDUES is the difference between DATA and an output of a theoretical model 
 
-We also declared 5 domain constraints enumerating the possible values for attributes SENSOR, FLAG1, FLAG2, FLAG3 and FLAG4.
+We also declared 1 domain constraints enumerating the possible values for attributes SENSOR.
 
-Finally, we declared the constituent {STATION, SENSOR, FLAG1, CORRECT_TIME_UTC} as a candidate key of the table meaning that for a given station, a given sensor and a given data origin, CORRECT_TIME_UTC is unique.
+Finally, we declared the constituent {STATION, SENSOR, TIME_UTC} as a candidate key of the table meaning that for a given station and a given sensor, TIME_UTC is unique.
 
 ## Functions about Julian Time
 ### JulianTime(t)
-We found out useful to write a function computing the Julian time corresponding to a given timestamp (whether it is a RAW_TIME_UTC timestamp or a CORRECT_TIME_UTC timestamp). 
+We found out useful to write a function computing the Julian time corresponding to a given timestamp. 
 We wrote function JulianTime(t) in PL/pgSQL (Procedural Language/PostgreSQL). JulianTime(t) extends the native postgreSQL function `to_char(t,'J')` which computes the Julian day from timestamp t. JulianTime(t) is a stored function meaning it is compiled and stored in the database. It can be used in any SQL query:
 
 `SELECT julianTime(TIME_UTC) FROM HMEASURES WHERE ID=2;`

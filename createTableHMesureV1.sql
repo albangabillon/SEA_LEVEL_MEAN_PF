@@ -1,4 +1,4 @@
-CREATE TABLE HMESURES (
+CREATE TABLE HMEASURES (
 ID integer primary key generated always as identity,
 STATION VARCHAR(15) NOT NULL,
 SENSOR VARCHAR(15) NOT NULL,

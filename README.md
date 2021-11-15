@@ -1,5 +1,5 @@
 # SEA_LEVEL_MEAN_PF
-## Database schema for hourly SEA LEVEL data computed from TIDE STATIONS in South Pacific Ocean from 2009-06-13 to 2021-01-28
+## Database schema for HOURLY SEA LEVEL data computed from TIDE STATIONS in South Pacific Ocean from 2009-06-13 to 2021-01-28
 
 This postgresql code is relative to the database titled "HOURLY SEA LEVEL collected from TIDE STATIONS in South Pacific Ocean from 2009-06-13 to 2021-01-28", hosted by the National Oceanic and Oceanographic (NOAA), National Centers for Environmental Information (NCEI, https://www.ncei.noaa.gov/) under Reference ???.
 

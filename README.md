@@ -1,7 +1,7 @@
 # SEA_LEVEL_MEAN_PF
 ## Database schema for HOURLY SEA LEVEL data computed from TIDE STATIONS in South Pacific Ocean from 2009-06-13 to 2021-01-28
 
-This postgresql code is relative to the database titled "HOURLY SEA LEVEL collected from TIDE STATIONS in South Pacific Ocean from 2009-06-13 to 2021-01-28", hosted by the National Oceanic and Oceanographic (NOAA), National Centers for Environmental Information (NCEI, https://www.ncei.noaa.gov/) under Reference ???.
+This postgresql code is relative to the database titled "HOURLY SEA LEVEL collected from TIDE STATIONS in South Pacific Ocean from 2009-06-13 to 2021-01-28", hosted by the National Oceanic and Oceanographic (NOAA), National Centers for Environmental Information (NCEI, https://www.ncei.noaa.gov/) under Reference ANPM5B.
 
 The Database was created under the PostgreSQL database management.
 
@@ -33,3 +33,7 @@ This function can also be invoked in any SQL query:
 `SELECT Min1900(TIME_UTC) FROM HMEASURES WHERE ID=2;`
 
 **Nota Bene**: the reference time for the computation of Julian time (in days) is January 1, 1900 noon UTC, with a Julian time value of 2415021.0
+
+## Tide_Models_FP.zip
+
+This file contains the harmonic tide coefficients per station
